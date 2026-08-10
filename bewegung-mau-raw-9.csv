@@ -1,0 +1,10 @@
+﻿Bewegung,MAU.raw
+PUSH,"'+a +b"
+PULL,"'-a -b"
+SHIFT,±a ±b
+FLOW,~a ~b
+BREAK,!a !b
+SPIN,"'@a @b"
+RISE,^a ^b
+DROP,va vb
+ROOT,0a 0b

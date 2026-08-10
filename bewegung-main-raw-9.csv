@@ -1,0 +1,10 @@
+﻿Bewegung,MAIN.raw
+PUSH,"'+c"
+PULL,"'-c"
+SHIFT,±c
+FLOW,~c
+BREAK,!c
+SPIN,"'@c"
+RISE,^c
+DROP,vc
+ROOT,0c
