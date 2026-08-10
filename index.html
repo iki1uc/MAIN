@@ -40,4 +40,44 @@
     <h2>OPEN SCALE</h2>
     <p>index.html öffnet das System nach außen.</p>
     <p>Es ist die skalierbare Station, die alle Körper verbindet.</p>
+
+    <h2>Intern · TMP360 / TMPCHAIN</h2>
+    <pre id="tmp-output">TMP lädt…</pre>
 </div>
+
+<script src="OUR.js"></script>
+<script src="360.js"></script>
+
+<script>
+// iki1uc · index.html · TMP360 + TMPCHAIN · interne Ausgabe
+
+function showTMP() {
+    const out = TMPCHAIN.full("slide", "Ursache");
+
+    document.getElementById("tmp-output").textContent = `
+TMP360 / TMPCHAIN (intern)
+--------------------------------
+zug:        ${out.zug}
+hit:        ${out.hit}
+dump:       ${out.dump}
+lage:       ${out.lage}
+addr:       ${out.addr}
+
+rot360:     ${out.rot360}
+rot8x:      ${out.rot8x}
+rot12x:     ${out.rot12x}
+
+color:      ${out.color}
+percent:    ${out.percent}
+
+QI:         ${out.QI.join(" → ")}
+IQQ:        ${out.IQQ.join(" → ")}
+`;
+}
+
+showTMP();
+</script>
+
+<footer>
+    <p>📜 Lizenz: MIT – free to use and modify. Author credit © iki1uc muss erhalten bleiben.</p>
+</footer>
