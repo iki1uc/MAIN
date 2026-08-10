@@ -1,0 +1,7 @@
+﻿Zone,Name,Rolle
+1,PORT,Übergang
+2,MAIN,Meta‑Station
+3,KIpi,Pipeline
+4,Stationen,Operatoren
+5,CONTNIUM LIBERTY,Offener Raum
+6,PORT IN/OUT,Rückkanal
