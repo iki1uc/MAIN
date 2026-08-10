@@ -1,9 +1,44 @@
-MAU.raw.PUSH   = +>
-MAU.raw.PULL   = <+
-MAU.raw.SHIFT  = <>
-MAU.raw.FLOW   = ~>
-MAU.raw.BREAK  = !|
-MAU.raw.SPIN   = @°
-MAU.raw.RISE   = ^+
-MAU.raw.DROP   = v-
-MAU.raw.ROOT   = 0°
+# MAU.raw · Ursache + Wirkung · a + b
+
+# 1 · Ursache (U)
+U = {
+  kern: ◉,
+  impuls: 3
+}
+
+# 2 · Wirkung (W)
+W = {
+  mitte: ◎,
+  verzweig: ◆,
+  anstieg: △,
+  verdichtung: ▣
+}
+
+# 3 · Bildungsschicht (a/b)
+BILDUNG.a = src
+BILDUNG.b = exe
+
+# 4 · MAU-Bewegungen (U + W)
+MAU.raw = {
+  PUSH:  +>a +>b,
+  PULL:  <+a <+b,
+  SHIFT: <>a <>b,
+  FLOW:  ~>a ~>b,
+  BREAK: !|a !|b,
+  SPIN:  @°a @°b,
+  RISE:  ^+a ^+b,
+  DROP:  v-a v-b,
+  ROOT:  0°a 0°b
+}
+
+# 5 · TMP (U + W)
+MAU.TMP = {
+  U: [1,2,3],
+  W: [4,5,6]
+}
+
+# 6 · KIpi (U → W)
+MAU.KIpi = U → W
+
+# 7 · Station
+MAU.Station = MAU.raw + MAU.TMP + MAU.KIpi
