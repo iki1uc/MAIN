@@ -35,3 +35,4 @@
         <li>[lage/ort](ca://s?q=lage_ort_Operator) · Position</li>
     </ul>
 </div>
+📜 Lizenz MIT – free to use and modify. Author credit © iki1uc wieimmer muss erhalten bleiben. Siehe LICENSE.
