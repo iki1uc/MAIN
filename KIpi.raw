@@ -1,5 +1,44 @@
-U = {◉, 3}
-W = {◎, ◆, △, ▣}
-E = {81, 756, 27, ↺}
+# KIpi.raw · Ursache → Wirkung → Ergebnis · Atomkörper
 
-KIpi(U → W → E)
+# 1 · Ursache (U)
+U = {
+  kern: ◉,
+  impuls: 3
+}
+
+# 2 · Wirkung (W)
+W = {
+  mitte: ◎,
+  verzweig: ◆,
+  anstieg: △,
+  verdichtung: ▣
+}
+
+# 3 · Ergebnis (E)
+E = {
+  result_1: 81,
+  result_2: 756,
+  result_3: 27,
+  rueckkehr: ↺
+}
+
+# 4 · KIpi-Kausalität
+KIpi = U → W → E
+
+# 5 · QI / IQQ
+QI  = U → W → E → U   # 12×360°
+IQQ = U → W → E       # 6×360°
+
+# 6 · TMP (1–9)
+TMP = {
+  U: [1,2,3],
+  W: [4,5,6],
+  E: [7,8,9]
+}
+
+# 7 · Station
+Station.KIpi = KIpi + TMP
+
+# 8 · Achssystem
+Achse.6   = PORT + MAIN + KIpi + Station + LIBERTY + INOUT
+Achse.756 = Achse.6 × 9 × KIpi
