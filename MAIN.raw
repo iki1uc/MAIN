@@ -1,9 +1,64 @@
-PUSH  = +>
-PULL  = <+
-SHIFT = <>
-FLOW  = ~>
-BREAK = !|
-SPIN  = @°
-RISE  = ^+
-DROP  = v-
-ROOT  = 0°
+# MAIN.raw · Ausführungskörper · EDIT + RESPO + KIpi + TMP
+
+MAIN = W + E
+BILDUNG.c = run
+
+# 1 · Bewegungen (arithmerisch ausgeführt)
+MAIN.raw = {
+  PUSH:  +>c,
+  PULL:  <+c,
+  SHIFT: <>c,
+  FLOW:  ~>c,
+  BREAK: !|c,
+  SPIN:  @°c,
+  RISE:  ^+c,
+  DROP:  v-c,
+  ROOT:  0°c
+}
+
+# 2 · KIpi-Kausalität (W → E)
+KIpi.W = {◎, ◆, △, ▣}
+KIpi.E = {81, 756, 27, ↺}
+
+MAIN.KIpi = KIpi.W → KIpi.E
+
+# 3 · TMP-Ausführung (Zug 4–9)
+MAIN.TMP = {
+  slide: {zug:4, hit:tmp_hit_4, dump:tmp_dump_4, lage:tmp_lage_4, effect:tmp_slide_effect, move:tmp_slide_move, result:tmp_slide_result},
+  wette: {zug:5, hit:tmp_hit_5, dump:tmp_dump_5, lage:tmp_lage_5, effect:tmp_wette_effect, move:tmp_wette_move, result:tmp_wette_result},
+  score: {zug:6, hit:tmp_hit_6, dump:tmp_dump_6, lage:tmp_lage_6, effect:tmp_score_effect, move:tmp_score_move, result:tmp_score_result},
+
+  slide_final: {zug:7, hit:tmp_hit_7, dump:tmp_dump_7, lage:tmp_lage_7, final:tmp_slide_final, out:tmp_slide_out, close:tmp_slide_close},
+  wette_final: {zug:8, hit:tmp_hit_8, dump:tmp_dump_8, lage:tmp_lage_8, final:tmp_wette_final, out:tmp_wette_out, close:tmp_wette_close},
+  score_final: {zug:9, hit:tmp_hit_9, dump:tmp_dump_9, lage:tmp_lage_9, final:tmp_score_final, out:tmp_score_out, close:tmp_score_close}
+}
+
+# 4 · RESPO-Ausführung (Antwortkörper)
+RESPO.raw = {
+  OK:    +1,
+  NOK:   -1,
+  FLOW:  ~1,
+  BREAK: !1,
+  ECHO:  @1,
+  VOID:  01,
+  ROOT:  0°
+}
+
+MAIN.RESPO = RESPO.raw
+
+# 5 · EDIT-Körper (Bearbeitung)
+EDIT.raw = {
+  open:   "<EDIT>",
+  change: "<SHIFT>",
+  apply:  "<RUN>",
+  close:  "</EDIT>"
+}
+
+MAIN.EDIT = EDIT.raw
+
+# 6 · Station-Körper (Koordinaten)
+STATION.raw = MAIN.raw + MAIN.TMP + MAIN.KIpi + MAIN.RESPO + MAIN.EDIT
+
+# 7 · Achssystem (6 → 756)
+Achse.6   = PORT + MAIN + KIpi + Station + LIBERTY + INOUT
+Achse.756 = Achse.6 × 9 × KIpi
