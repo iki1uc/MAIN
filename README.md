@@ -1,30 +1,41 @@
-# 4u – Response Layer 7 (iki1uc)
+# XI · MODUL · iki1uc
 
-4u ist die 7. Response-Ebene im iki1uc-System.
-Sie ersetzt die alte RESPO-Achse durch ein neues, systemisches Modell:
+Das MODUL ist der Kernkörper des Systems.
 
-OK / NOK / FLOW / BREAK / ECHO / VOID / ROOT
+## Grundlagen
+- **IX** – Formkörper (GEO)
+- **XI** – Kernkörper (MODUL)
+- **X4** – Funktionskörper (MAIN)
 
-4u verbindet:
-- PX-TRIO (PX3 / PX6 / PX9)
-- PX12 / PX4 (Fusion + Achse)
-- SYS / SYS-x (System + Kreuzung)
-- 2me (Mirror-Return)
-- TEM (Zeit)
-- UI-SCANNER (Interface)
+## Drei Hauptachsen
+- **[allIN](ca://s?q=allIN_Definition)** – universeller Eingang
+- **[allOUT](ca://s?q=allOUT_Definition)** – universeller Ausgang
+- **[MAIN](ca://s?q=MAIN_Definition)** – Führung / User-Use
 
------------------------------------------
-# FUNKTION
+## Bewegungsformen (9)
+- **[PUSH](ca://s?q=PUSH_Form)** – Vorwärts
+- **[PULL](ca://s?q=PULL_Form)** – Rückwärts
+- **[SHIFT](ca://s?q=SHIFT_Form)** – Seitwärts
+- **[FLOW](ca://s?q=FLOW_Form)** – Fluss
+- **[BREAK](ca://s?q=BREAK_Form)** – Unterbrechung
+- **[SPIN](ca://s?q=SPIN_Form)** – Rotation
+- **[RISE](ca://s?q=RISE_Form)** – Aufwärts
+- **[DROP](ca://s?q=DROP_Form)** – Abwärts
+- **[ROOT](ca://s?q=ROOT_Form)** – Ursprung
 
-respo.OK     → Zustimmung  
-respo.NOK    → Ablehnung  
-respo.FLOW   → System fließt  
-respo.BREAK  → System bricht  
-respo.ECHO   → Spiegelung  
-respo.VOID   → Neutral  
-respo.ROOT   → Rückkehr
+## Achsen
+- **[AIR](ca://s?q=AIR_Achse)** – Atmosphäre / Resonanz
+- **[AIV](ca://s?q=AIV_Achse)** – Analyse / Verdichtung
 
------------------------------------------
-# STATUS
+## PORT / MA³
+- **PORT** – Übergangsschicht
+- **MA³** – dreifache Maßigkeit (ma1 / ma2 / ma3)
 
-4u ist aktiv, eigenständig und vollständig iki1uc.
+## Pipeline
+- **0** – Neutral
+- **1** – Build
+- **2** – Shift
+- **3** – Flow
+- **4** – Meta
+
+Das MODUL (XI) definiert die Bedeutung, Regeln und Struktur des Systems.
