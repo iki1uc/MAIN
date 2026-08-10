@@ -1,47 +1,12 @@
-﻿Zone,Name,Rolle
-1,PORT,Übergang
-2,MAIN,Meta‑Station
-3,KIpi,Pipeline
-4,Stationen,Operatoren
-5,CONTNIUM LIBERTY,Offener Raum
-6,PORT IN/OUT,Rückkanal
-<!-- iki1uc · index.html · OPEN SCALE · 6-ACHSE -->
+Ebene,Operator,tmp_zug,tmp_hit,tmp_dump,tmp_lage,tmp_ursache,tmp_wirkung,tmp_ergebnis
+Ursache,slide,1,tmp_hit_1,tmp_dump_1,tmp_lage_1,tmp_slide_start,tmp_slide_shift,tmp_slide_end
+Ursache,wette,2,tmp_hit_2,tmp_dump_2,tmp_lage_2,tmp_wette_start,tmp_wette_shift,tmp_wette_end
+Ursache,score,3,tmp_hit_3,tmp_dump_3,tmp_lage_3,tmp_score_start,tmp_score_shift,tmp_score_end
 
-<div id="OPEN-SCALE">
-    <h1>OPEN SCALE · 6-ACHSE</h1>
-    <p>Index-Ebene des Systems. Verbindung von IX → XI → ((( MAIN ))).</p>
-    <p>Die 6-Achse bildet den offenen Raum für alle Stationen.</p>
+Wirkung,slide,4,tmp_hit_4,tmp_dump_4,tmp_lage_4,tmp_slide_effect,tmp_slide_move,tmp_slide_result
+Wirkung,wette,5,tmp_hit_5,tmp_dump_5,tmp_lage_5,tmp_wette_effect,tmp_wette_move,tmp_wette_result
+Wirkung,score,6,tmp_hit_6,tmp_dump_6,tmp_lage_6,tmp_score_effect,tmp_score_move,tmp_score_result
 
-    <h2>1 · PORT</h2>
-    <p>[PORT](ca://s?q=PORT_System) ist die Übergangsschicht des Systems.</p>
-    <p>0.33 → Eingang · 0.66 → Verarbeitung · 0.99 → Ausgang</p>
-
-    <h2>2 · MAIN</h2>
-    <p>[MAIN](ca://s?q=MAIN_System) ist die Meta-Station, die PORT ausführt.</p>
-    <p>Führung · Ausführung · Meta-Lage</p>
-
-    <h2>3 · KIpi</h2>
-    <p>[KIpi](ca://s?q=KIpi_Process) ist die Pipeline zwischen PORT und MAIN.</p>
-    <p>allIN → process → allOUT</p>
-
-    <h2>4 · Stationen</h2>
-    <ul>
-        <li>[slide](ca://s?q=slide_Operator) · Übergang</li>
-        <li>[wette](ca://s?q=wette_Operator) · Risiko</li>
-        <li>[score](ca://s?q=score_Operator) · Bewertung</li>
-        <li>[use/user](ca://s?q=use_user_Operator) · Führung</li>
-        <li>[tech](ca://s?q=tech_Operator) · Ausführung</li>
-        <li>[lage/ort](ca://s?q=lage_ort_Operator) · Position</li>
-    </ul>
-
-    <h2>5 · CONTNIUM LIBERTY (TY-Zone)</h2>
-    <p>[NEI LIBERTY](ca://s?q=NEI_LIBERTY) ist die offene Zone des Systems.</p>
-    <p>Freiheit · Skalierung · Außenraum</p>
-
-    <h2>6 · PORT IN/OUT</h2>
-    <p>[PORT IN/OUT](ca://s?q=PORT_IN_OUT) ist der Rückkanal.</p>
-    <p>Funktioniert unabhängig von AIR · AIV · IX · XI · X4.</p>
-
-    <h2>Systemfluss</h2>
-    <p>PORT → MAIN → KIpi → Stationen → CONTNIUM LIBERTY → PORT IN/OUT</p>
-</div>
+Ergebnis,slide,7,tmp_hit_7,tmp_dump_7,tmp_lage_7,tmp_slide_final,tmp_slide_out,tmp_slide_close
+Ergebnis,wette,8,tmp_hit_8,tmp_dump_8,tmp_lage_8,tmp_wette_final,tmp_wette_out,tmp_wette_close
+Ergebnis,score,9,tmp_hit_9,tmp_dump_9,tmp_lage_9,tmp_score_final,tmp_score_out,tmp_score_close
