@@ -1,41 +1,37 @@
-# XI · MODUL · iki1uc
+<!-- iki1uc · X4 · ((( MAIN ))) -->
+<div id="MAIN">
+    <h1>(( MAIN )) · X4</h1>
+    <p>Funktionskörper des Systems.</p>
+    <p>Ausführung, Leitung, Meta-Steuerung.</p>
 
-Das MODUL ist der Kernkörper des Systems.
+    <h2>PORT · Übergang</h2>
+    <p>0.33 → Eingang</p>
+    <p>0.66 → Verarbeitung</p>
+    <p>0.99 → Ausgang</p>
 
-## Grundlagen
-- **IX** – Formkörper (GEO)
-- **XI** – Kernkörper (MODUL)
-- **X4** – Funktionskörper (MAIN)
+    <h2>KIpi · Pipeline</h2>
+    <ul>
+        <li>[allIN](ca://s?q=allIN_Definition) · Aufnahme</li>
+        <li>[process](ca://s?q=KIpi_Process) · Verarbeitung</li>
+        <li>[allOUT](ca://s?q=allOUT_Definition) · Abgabe</li>
+    </ul>
 
-## Drei Hauptachsen
-- **[allIN](ca://s?q=allIN_Definition)** – universeller Eingang
-- **[allOUT](ca://s?q=allOUT_Definition)** – universeller Ausgang
-- **[MAIN](ca://s?q=MAIN_Definition)** – Führung / User-Use
+    <h2>Axiom · whirl · 3‑Eck</h2>
+    <p>0.33 → Ursprung</p>
+    <p>0.66 → Mitte</p>
+    <p>0.99 → Spitze</p>
 
-## Bewegungsformen (9)
-- **[PUSH](ca://s?q=PUSH_Form)** – Vorwärts
-- **[PULL](ca://s?q=PULL_Form)** – Rückwärts
-- **[SHIFT](ca://s?q=SHIFT_Form)** – Seitwärts
-- **[FLOW](ca://s?q=FLOW_Form)** – Fluss
-- **[BREAK](ca://s?q=BREAK_Form)** – Unterbrechung
-- **[SPIN](ca://s?q=SPIN_Form)** – Rotation
-- **[RISE](ca://s?q=RISE_Form)** – Aufwärts
-- **[DROP](ca://s?q=DROP_Form)** – Abwärts
-- **[ROOT](ca://s?q=ROOT_Form)** – Ursprung
+    <h2>Station</h2>
+    <p>(( MAIN )) ist die Meta-Station, die PORT, KIpi und das Axiom ausführt.</p>
+    <p>Sie verbindet IX (Form) und XI (Modul) zu einem operablen System.</p>
 
-## Achsen
-- **[AIR](ca://s?q=AIR_Achse)** – Atmosphäre / Resonanz
-- **[AIV](ca://s?q=AIV_Achse)** – Analyse / Verdichtung
-
-## PORT / MA³
-- **PORT** – Übergangsschicht
-- **MA³** – dreifache Maßigkeit (ma1 / ma2 / ma3)
-
-## Pipeline
-- **0** – Neutral
-- **1** – Build
-- **2** – Shift
-- **3** – Flow
-- **4** – Meta
-
-Das MODUL (XI) definiert die Bedeutung, Regeln und Struktur des Systems.
+    <h2>Operatoren</h2>
+    <ul>
+        <li>[slide](ca://s?q=slide_Operator) · Übergang</li>
+        <li>[wette](ca://s?q=wette_Operator) · Risiko</li>
+        <li>[score](ca://s?q=score_Operator) · Bewertung</li>
+        <li>[use/user](ca://s?q=use_user_Operator) · Führung</li>
+        <li>[tech](ca://s?q=tech_Operator) · Ausführung</li>
+        <li>[lage/ort](ca://s?q=lage_ort_Operator) · Position</li>
+    </ul>
+</div>
