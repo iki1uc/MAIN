@@ -5,3 +5,43 @@
 4,Stationen,Operatoren
 5,CONTNIUM LIBERTY,Offener Raum
 6,PORT IN/OUT,Rückkanal
+<!-- iki1uc · index.html · OPEN SCALE · 6-ACHSE -->
+
+<div id="OPEN-SCALE">
+    <h1>OPEN SCALE · 6-ACHSE</h1>
+    <p>Index-Ebene des Systems. Verbindung von IX → XI → ((( MAIN ))).</p>
+    <p>Die 6-Achse bildet den offenen Raum für alle Stationen.</p>
+
+    <h2>1 · PORT</h2>
+    <p>[PORT](ca://s?q=PORT_System) ist die Übergangsschicht des Systems.</p>
+    <p>0.33 → Eingang · 0.66 → Verarbeitung · 0.99 → Ausgang</p>
+
+    <h2>2 · MAIN</h2>
+    <p>[MAIN](ca://s?q=MAIN_System) ist die Meta-Station, die PORT ausführt.</p>
+    <p>Führung · Ausführung · Meta-Lage</p>
+
+    <h2>3 · KIpi</h2>
+    <p>[KIpi](ca://s?q=KIpi_Process) ist die Pipeline zwischen PORT und MAIN.</p>
+    <p>allIN → process → allOUT</p>
+
+    <h2>4 · Stationen</h2>
+    <ul>
+        <li>[slide](ca://s?q=slide_Operator) · Übergang</li>
+        <li>[wette](ca://s?q=wette_Operator) · Risiko</li>
+        <li>[score](ca://s?q=score_Operator) · Bewertung</li>
+        <li>[use/user](ca://s?q=use_user_Operator) · Führung</li>
+        <li>[tech](ca://s?q=tech_Operator) · Ausführung</li>
+        <li>[lage/ort](ca://s?q=lage_ort_Operator) · Position</li>
+    </ul>
+
+    <h2>5 · CONTNIUM LIBERTY (TY-Zone)</h2>
+    <p>[NEI LIBERTY](ca://s?q=NEI_LIBERTY) ist die offene Zone des Systems.</p>
+    <p>Freiheit · Skalierung · Außenraum</p>
+
+    <h2>6 · PORT IN/OUT</h2>
+    <p>[PORT IN/OUT](ca://s?q=PORT_IN_OUT) ist der Rückkanal.</p>
+    <p>Funktioniert unabhängig von AIR · AIV · IX · XI · X4.</p>
+
+    <h2>Systemfluss</h2>
+    <p>PORT → MAIN → KIpi → Stationen → CONTNIUM LIBERTY → PORT IN/OUT</p>
+</div>
