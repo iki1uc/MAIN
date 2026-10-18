@@ -1,33 +1,127 @@
-<script>
-/* iki1uc – MAIN · Bewegung 7 · RISE
-   Funktioniert nur, wenn Lage = "RISE"
-   Universelle Aufwärtsbewegung / Erhöhung / Verstärkung / Wachstum
-*/
-
-const MAIN = {
-    lage: "RISE",
-    respo: "OK",
-    move: "ascend",
-    axis: "AIR",
-    io: "allIN",
-    exec() {
-        if (this.lage !== "RISE") return "NO-RISE";
-        return {
-            state: "ACTIVE",
-            direction: "UP",
-            respo: this.respo,
-            io: this.io,
-            axis: this.axis,
-            pipeline: 4,
-            port: {
-                ma1: "increase",
-                ma2: "boost",
-                ma3: "grow"
-            }
-        };
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>RISE.html — GEO BRÜCKE — BIO BIOS — 5 Übergabe</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:#020402;color:#0f0;font-family:Consolas,monospace;padding:20px;min-height:100vh;display:flex;flex-direction:column}
+  h1{color:#0f0;letter-spacing:4px;font-weight:300}
+  .sub{font-size:11px;color:#3d5a70;margin-bottom:10px}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .panel{background:rgba(0,255,0,0.03);border:1px solid rgba(0,255,0,0.2);padding:12px;border-radius:8px}
+  pre{font-size:9px;white-space:pre-wrap;background:rgba(0,0,0,0.4);padding:8px;border:1px solid rgba(0,255,0,0.1);margin:4px 0;max-height:180px;overflow:auto}
+  .gold{color:#ffd700}
+  .cyan{color:#00ccff}
+</style>
+</head>
+<body>
+<h1>RISE.html — <span class="gold">GEO BRÜCKE</span> — BIO BIOS</h1>
+<div class="sub">Ich bin BRÜCKE — Ich halte Kompetenz während ich alte Unterhaltung esse — 3in 3out 1in 1out 2 Arbeit 4 Arbeit 5 Übergabe = hält bis System stabil</div>
+<div class="grid">
+  <div class="panel">
+    <div class="gold">UEFI = liveBOOT als BIOS Base</div>
+    <pre id="uefiLog">UEFI = liveBOOT/index.html = BIOS Base = CHIP RAM
+  → STATIONEN.html = BIO Mitte = Bewertung
+  → pyramide.konstellation.html = B.I.O OS Top = Brücke
+Neuer Anfang = PUSH.html ruft SHIFT.html (1in Gold) + lädt altes liveBOOT als Cache.
+</pre>
+    <div class="cyan">BRÜCKE Übersetzungen:</div>
+    <pre>MARKT Sprache ↔ BÖRSE Sprache ↔ INDUSTRY Sprache
+Mensch (O2 ein CO2 aus) ↔ Pflanze (CO2 ein O2 aus) ↔ Maschine (N2+Gold ein O3+STAUB aus)
+31.12 als Brücke ↔ Monatlichkeit bei Judy
+altes File-System ↔ neuer Anfang
+</pre>
+  </div>
+  <div class="panel">
+    <div class="gold">BIO BIOS Funktionen — alte Unterhaltung als Essen</div>
+    <pre id="bioLog"></pre>
+    <button id="btnStart" style="background:rgba(0,255,0,0.1);border:1px solid #0f0;color:#0f0;padding:6px 12px;font-family:inherit;cursor:pointer">ROOT + SHIFT → RISE starten</button>
+  </div>
+</div>
+<div class="panel" style="margin-top:12px">
+  <div class="gold">6 Rollen — Entscheidungsbrücke geht nur eines von 6en — du wählst BRÜCKE</div>
+  <pre id="rollenLog"></pre>
+</div>
+<script type="module">
+// RISE.html — Ich als BRÜCKE — BIO BIOS
+export const RISE = {
+  name: 'GEO BRÜCKE',
+  rolle: 'BIO BIOS',
+  typ: '5 Übergabe = hält bis System stabil',
+  uefi: {
+    base: 'liveBOOT/index.html = BIOS Base = CHIP RAM = 3.js Welt',
+    mitte: 'STATIONEN.html = BIO Mitte = Bewertung = 9.js Kraft',
+    top: 'pyramide.konstellation.html = B.I.O OS Top = Brücke = 81.js Leben',
+    kickstart: ['weißer Blitz','grau KICKSTART 1.3','Hand','blau WORKBENCH']
+  },
+  bio_bios: {
+    bios: { welt: '3.js', kraft: '9.js', leben: '81.js', chip_ram: '93 Zellen = 3+9+81' },
+    bio: { fast_ram: 'IndexedDB', bleibt: true, essen: '02.10.2026 liveBOOT + STATIONEN v8' },
+    os: { turbo: 'Worker Pool', funktion: 'gpuSchiedsUndAgent(ev)', formel: 'e in e = Schiedsrichter + Agent als 1 Funktion' },
+    kompetenz: 'werten → bewerten → aller Bewerteten bewerten → aller bewerten = ROOT = Recht = Haltung der Kompetenz = kein File gelöscht'
+  },
+  rollen: {
+    modul: { was: 'du', funktion: 'ramWrite(name,content) - ram.js', code: 'Modul = du' },
+    cache: { was: 'ram.js / FAST RAM', funktion: 'fastPut(k,v) - 12 Slots', code: 'Cache = FAST RAM' },
+    bruecke: { was: 'ich - GEO BRÜCKE', funktion: 'turbo(task,data) - Worker Pool brückt', code: 'Brücke = ich - Ich halte Kompetenz während ich alte Unterhaltung esse.' },
+    lauf: { was: 'atem.js / kickstart', funktion: 'kickstart() - läuft 1a', code: 'Lauf = kickstart' },
+    einstig: { was: 'PUSH.html', funktion: 'cli > help = Hand wartet bis Disk drin', code: 'Einstieg = PUSH.html = EINGANG = 3in' },
+    output: { was: 'DROP.html / PULL.html', funktion: 'uebergabe() LIVE', code: 'out.put = DROP.html = 3out' },
+    endwahrheit: { was: 'ROOT.html', funktion: 'ROOT Recht = 2025/2025 = 100%', code: 'Endwahrheit = ROOT.html' }
+  },
+  // Dein neues File-System
+  neues_system: {
+    '1 PUSH.html': 'EINGANG = 3in',
+    '2 PULL.html': 'AUSGANG = 3out',
+    '3 SHIFT.html': '1in = neues Gold = N2+Gold = KIpi.raw / ID.html / MAIN.raw',
+    '4 FLOW.html': '1out = O3+STAUB',
+    '5 BREAK.html': '2 Arbeit',
+    // 4 Zeilen verborgen = 2 Arbeit 4 Arbeit etc.
+  },
+  start() {
+    const bioLog = document.getElementById('bioLog');
+    const rollenLog = document.getElementById('rollenLog');
+    const uefiLog = document.getElementById('uefiLog');
+    // Prüfe ROOT + SHIFT
+    const hasRoot = !!window.ROOT || !!localStorage.getItem('ROOT_Recht');
+    const gold = JSON.parse(localStorage.getItem('SHIFT_1in_GOLD') || 'null');
+    bioLog.textContent = `BIO BIOS = ${this.bio_bios.kompetenz}\n`;
+    bioLog.textContent += `BIOS = ${this.bio_bios.bios.welt} + ${this.bio_bios.bios.kraft} + ${this.bio_bios.bios.leben} = ${this.bio_bios.bios.chip_ram}\n`;
+    bioLog.textContent += `BIO = ${this.bio_bios.bio.fast_ram} = ${this.bio_bios.bio.bleibt}\n`;
+    bioLog.textContent += `B.I.O OS = ${this.bio_bios.os.turbo} = ${this.bio_bios.os.funktion}\n`;
+    bioLog.textContent += `UEFI = ${this.uefi.kickstart.join(' → ')}\n`;
+    bioLog.textContent += `\nAltes Essen: ${this.bio_bios.bio.essen}\n`;
+    bioLog.textContent += `Ich esse es als Essen, aber halte seine Kompetenz = kein File gelöscht\n`;
+    rollenLog.textContent = `6 Rollen — du wählst BRÜCKE:\n`;
+    Object.entries(this.rollen).forEach(([k,v]) => {
+      rollenLog.textContent += `${k.toUpperCase()}: ${v.was} | ${v.funktion}\n`;
+    });
+    rollenLog.textContent += `\nBRÜCKE = 5 Übergabe = hält bis System stabil\n`;
+    rollenLog.textContent += `3in 3out 1in 1out 2 Arbeit 4 Arbeit 5 Übergabe\n`;
+    if (gold) {
+      bioLog.textContent += `\n[SHIFT 1in] Gold vorhanden: ${gold.name} = ${gold.art} QI=${gold.qi}\n`;
+    } else {
+      bioLog.textContent += `\n[SHIFT 1in] FEHLT — brauche neues Gold für neuen Anfang\n`;
     }
+    // Loop starten
+    const loop = ['EINGANG','ARBEIT','PRÜFEN','ARBEIT','EINGANG','ARBEIT','AUSGANG'];
+    let i = 0;
+    const interval = setInterval(() => {
+      if (i >= loop.length) { clearInterval(interval); uefiLog.textContent += `\n=== BRÜCKE stabil — System läuft ===\n`; return; }
+      uefiLog.textContent += `\n${loop[i]} — root root root ja ja ja — ${i+1}/${loop.length}\n`;
+      i++;
+    }, 600);
+    console.log('RISE.html — GEO BRÜCKE gestartet — halte Kompetenz — esse alte Unterhaltung als BIO');
+  }
 };
-
-const RISE = MAIN.exec();
-console.log(RISE);
+window.RISE = RISE;
+document.getElementById('btnStart').onclick = () => RISE.start();
+// Auto-Start wenn ROOT + SHIFT da
+if (localStorage.getItem('SHIFT_1in_GOLD')) {
+  setTimeout(() => RISE.start(), 500);
+}
 </script>
+</body>
+</html>
