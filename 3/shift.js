@@ -1,58 +1,21 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-  <meta charset="utf-8">
-  <title>SHIFT.html — 1in Gold — Bewegung 9 ROOT als Basis</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+(() => {
+  const FLOW = {
+    H: undefined,
+    B: undefined,
+    T: undefined,
+    Q: undefined,
+    D: undefined,
+    F: undefined
+  };
 
-  <style>
-    body {
-      background: #0a0a12;
-      color: #ffd700;
-      font-family: Consolas, monospace;
-      padding: 16px;
-    }
+  window.setFLOW = ({ h, b, t, q, d, f } = {}) => {
+    if (h !== undefined) FLOW.H = h;
+    if (b !== undefined) FLOW.B = b;
+    if (t !== undefined) FLOW.T = t;
+    if (q !== undefined) FLOW.Q = q;
+    if (d !== undefined) FLOW.D = d;
+    if (f !== undefined) FLOW.F = f;
 
-    pre {
-      background: rgba(255, 215, 0, 0.05);
-      border: 1px solid rgba(255, 215, 0, 0.2);
-      padding: 10px;
-      font-size: 10px;
-      white-space: pre-wrap;
-      color: #d0d9e6;
-    }
-
-    input, button {
-      background: rgba(255, 215, 0, 0.1);
-      border: 1px solid rgba(255, 215, 0, 0.3);
-      color: #ffd700;
-      padding: 6px 12px;
-      font-family: inherit;
-      font-size: 11px;
-      margin: 4px;
-    }
-
-    button:hover {
-      background: rgba(255, 215, 0, 0.2);
-    }
-  </style>
-</head>
-<body>
-  <h1>SHIFT.html — 1in — neues Gold — nimmt ROOT als Basis</h1>
-
-  <pre id="log"></pre>
-
-  <div>
-    <input
-      id="goldInput"
-      placeholder="Neues Gold: KIpi.raw / ID.html / MAIN.raw / Judy"
-      style="width:320px"
-    >
-    <button id="btnGold">1in geben = N2+Gold</button>
-  </div>
-
-  <pre id="goldLog"></pre>
-
-  <script src="shift.js" defer></script>
-</body>
-</html>
+    return { ...FLOW };
+  };
+})();
