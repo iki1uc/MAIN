@@ -1,0 +1,8 @@
+function readLocalJSON(key) {
+    try {
+        return JSON.parse(localStorage.getItem(key) || "null");
+    } catch (error) {
+        console.warn(`Ungültige Daten in localStorage: ${key}`, error);
+        return null;
+    }
+}JSON.parse
