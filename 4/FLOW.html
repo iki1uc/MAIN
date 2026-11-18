@@ -1,33 +1,48 @@
-<script>
-/* iki1uc – MAIN · Bewegung 4 · FLOW
-   Funktioniert nur, wenn Lage = "FLOW"
-   Universelle Fließbewegung / Stabilität / Durchlauf
-*/
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>iki1uc — MAIN · Bewegung 4 · FLOW</title>
+</head>
+<body>
+  <pre id="log">FLOW wird gestartet …</pre>
 
-const MAIN = {
-    lage: "FLOW",
-    respo: "FLOW",
-    move: "stream",
-    axis: "AIR",
-    io: "allIN",
-    exec() {
+  <script>
+    /* iki1uc – MAIN · Bewegung 4 · FLOW
+       Funktioniert nur, wenn Lage = "FLOW"
+    */
+
+    const MAIN = {
+      lage: "FLOW",
+      respo: "FLOW",
+      move: "stream",
+      axis: "AIR",
+      io: "allIN",
+
+      exec() {
         if (this.lage !== "FLOW") return "NO-FLOW";
-        return {
-            state: "ACTIVE",
-            direction: "STREAM",
-            respo: this.respo,
-            io: this.io,
-            axis: this.axis,
-            pipeline: 3,
-            port: {
-                ma1: "flow",
-                ma2: "stable",
-                ma3: "continuous"
-            }
-        };
-    }
-};
 
-const FLOW = MAIN.exec();
-console.log(FLOW);
-</script>
+        return {
+          state: "ACTIVE",
+          direction: "STREAM",
+          respo: this.respo,
+          io: this.io,
+          axis: this.axis,
+          pipeline: 3,
+          port: {
+            ma1: "flow",
+            ma2: "stable",
+            ma3: "continuous"
+          }
+        };
+      }
+    };
+
+    const FLOW = MAIN.exec();
+    document.getElementById("log").textContent =
+      JSON.stringify(FLOW, null, 2);
+    console.log(FLOW);
+  </script>
+</body>
+</html>
