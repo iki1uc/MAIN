@@ -1,2 +1,2 @@
-const root = JSON.parse(localStorage.getItem('ROOT_Recht') || 'null');
-const gold = JSON.parse(localStorage.getItem('SHIFT_1in_GOLD') || 'null');
+const root = readLocalJSON("ROOT_Recht");
+const gold = readLocalJSON("SHIFT_1in_GOLD");
