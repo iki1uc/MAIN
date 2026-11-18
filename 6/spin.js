@@ -1,33 +1,38 @@
-<script>
 /* iki1uc – MAIN · Bewegung 6 · SPIN
-   Funktioniert nur, wenn Lage = "SPIN"
-   Universelle Rotationsbewegung / Verdichtung / Analyse / Zyklus
+   Vulkan-Prinzip: Eingabe → Verarbeitung → Ausgabe
 */
 
-const MAIN = {
+(() => {
+  const MAIN = {
     lage: "SPIN",
     respo: "VOID",
     move: "rotate",
     axis: "AIV",
     io: "allIN",
-    exec() {
-        if (this.lage !== "SPIN") return "NO-SPIN";
-        return {
-            state: "ACTIVE",
-            direction: "ROTATION",
-            respo: this.respo,
-            io: this.io,
-            axis: this.axis,
-            pipeline: 4,
-            port: {
-                ma1: "cycle",
-                ma2: "compress",
-                ma3: "analyze"
-            }
-        };
-    }
-};
 
-const SPIN = MAIN.exec();
-console.log(SPIN);
-</script>
+    exec() {
+      if (this.lage !== "SPIN") return { state: "NO-SPIN" };
+
+      return {
+        state: "ACTIVE",
+        direction: "ROTATION",
+        respo: this.respo,
+        io: this.io,
+        axis: this.axis,
+        pipeline: 4,
+        port: {
+          ma1: "cycle",
+          ma2: "compress",
+          ma3: "analyze"
+        }
+      };
+    }
+  };
+
+  const SPIN = MAIN.exec();
+  console.log(SPIN);
+
+  // Optional für andere Skripte oder die Browser-Konsole
+  window.MAIN = MAIN;
+  window.SPIN = SPIN;
+})();
