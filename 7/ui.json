@@ -1,4 +1,8 @@
-if (!root || !gold) {
-    riseLog.textContent += "\nStart blockiert: ROOT oder SHIFT Gold fehlt.";
-    return;
+{
+  "readLocalJSON": {
+    "code": "function readLocalJSON(key) { try { return JSON.parse(localStorage.getItem(key) || \"null\"); } catch (error) { console.warn(`Ungültige Daten in localStorage: ${key}`, error); return null; } }"
+  },
+  "root": "const root = readLocalJSON(\"ROOT_Recht\");",
+  "gold": "const gold = readLocalJSON(\"SHIFT_1in_GOLD\");",
+  "startGuard": "if (!root || !gold) { riseLog.textContent += \"\\nStart blockiert: ROOT oder SHIFT Gold fehlt.\"; return; }"
 }
