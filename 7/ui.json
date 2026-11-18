@@ -1,0 +1,4 @@
+if (!root || !gold) {
+    riseLog.textContent += "\nStart blockiert: ROOT oder SHIFT Gold fehlt.";
+    return;
+}
