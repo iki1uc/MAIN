@@ -1,15 +1,15 @@
-<script>
-// iki1uc · INTERNAL TMP ENGINE · QI · IQQ · 360° · 8X · 12X · KETTEN
+// iki1uc · MAIN · LOWER ROOT · TMPCHAIN
 
-const TMPCHAIN = {
-    // Farben (gelb/rot/grün)
+const MAIN = {
+    lage: "ROOT",
+    respo: "ROOT",
+
     color: {
         ursache: "gelb",
         wirkung: "rot",
         ergebnis: "grün"
     },
 
-    // Prozent
     percent: {
         ursache: 33,
         wirkung: 66,
@@ -17,42 +17,47 @@ const TMPCHAIN = {
         voll: 100
     },
 
-    // Rotationen
     rot: {
         r360: 360,
         r8x: 360 * 8,
         r12x: 360 * 12
     },
 
-    // QI-Kette (12x360°)
     QI: ["◉", 3, "◎", "◆", "△", "▣", 81, 756, 27, 3, "↺"],
-
-    // IQQ-Kette (6x360°)
     IQQ: [3, 9, 81, 756, 27, 3, "↺"],
 
-    // Ketten-Ausgabe
-    chain(type) {
+    set({ lage, respo } = {}) {
+        if (lage !== undefined) this.lage = lage;
+        if (respo !== undefined) this.respo = respo;
+
+        return { lage: this.lage, respo: this.respo };
+    },
+
+    chain(type = "IQQ") {
         return type === "QI" ? this.QI : this.IQQ;
     },
 
-    // TMP360 + Ketten kombiniert
-    full(operator, ebene) {
+    exec(operator, ebene) {
+        if (this.lage !== "ROOT") return "NO-ROOT";
+
+        const key = ebene?.toLowerCase();
         const base = TMP360.full(operator, ebene);
 
         return {
             ...base,
-            color: TMPCHAIN.color[ebene.toLowerCase()],
-            percent: TMPCHAIN.percent[ebene.toLowerCase()],
-            rot360: TMPCHAIN.rot.r360,
-            rot8x: TMPCHAIN.rot.r8x,
-            rot12x: TMPCHAIN.rot.r12x,
-            QI: TMPCHAIN.chain("QI"),
-            IQQ: TMPCHAIN.chain("IQQ")
+            state: "ROOT",
+            respo: this.respo,
+            color: this.color[key],
+            percent: this.percent[key],
+            rot360: this.rot.r360,
+            rot8x: this.rot.r8x,
+            rot12x: this.rot.r12x,
+            QI: this.chain("QI"),
+            IQQ: this.chain("IQQ")
         };
     }
 };
 
 // Beispiel
-console.log(TMPCHAIN.full("slide", "Ursache"));
-console.log(TMPCHAIN.full("score", "Ergebnis"));
-</script>
+console.log(MAIN.exec("slide", "Ursache"));
+console.log(MAIN.exec("score", "Ergebnis"));
