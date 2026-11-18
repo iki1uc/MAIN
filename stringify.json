@@ -1,0 +1,6 @@
+localStorage.setItem("ROOT_Recht", JSON.stringify({
+  version: 1,
+  state: ROOT_ORIGINAL.state,
+  direction: ROOT_ORIGINAL.direction,
+  port: ROOT_ORIGINAL.port
+}));
