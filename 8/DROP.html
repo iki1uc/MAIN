@@ -1,8 +1,23 @@
 <script>
-/* iki1uc – MAIN · Bewegung 8 · DROP
-   Funktioniert nur, wenn Lage = "DROP"
-   Universelle Abwärtsbewegung / Entlastung / Abgabe / Reduktion
-*/
+/* iki1uc – MAIN · Bewegung 8 · DROP */
+
+let H = 1;
+let B = 1;
+let T = 1;
+let Q = 1;
+let D = 1;
+let F = 1;
+
+window.setDROP = ({ h, b, t, q, d, f } = {}) => {
+    if (h !== undefined) H = h;
+    if (b !== undefined) B = b;
+    if (t !== undefined) T = t;
+    if (q !== undefined) Q = q;
+    if (d !== undefined) D = d;
+    if (f !== undefined) F = f;
+
+    return { H, B, T, Q, D, F };
+};
 
 const MAIN = {
     lage: "DROP",
@@ -10,8 +25,10 @@ const MAIN = {
     move: "descend",
     axis: "AIV",
     io: "allOUT",
+
     exec() {
         if (this.lage !== "DROP") return "NO-DROP";
+
         return {
             state: "ACTIVE",
             direction: "DOWN",
@@ -19,6 +36,7 @@ const MAIN = {
             io: this.io,
             axis: this.axis,
             pipeline: 1,
+            flow: { H, B, T, Q, D, F },
             port: {
                 ma1: "release",
                 ma2: "reduce",
@@ -28,6 +46,6 @@ const MAIN = {
     }
 };
 
-const DROP = MAIN.exec();
-console.log(DROP);
+window.DROP = MAIN.exec();
+console.log(window.DROP);
 </script>
